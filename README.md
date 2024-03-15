@@ -2,4 +2,4 @@
 This app  converts public YouTube Transcript to Detailed Blog
 
 
-## Try the app :  [yt_blog genarator](https://clonepiezoolens.streamlit.app/)
+## Try the app :  [yt_blog genarator](https://yt-blog.streamlit.app/)
