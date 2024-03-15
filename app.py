@@ -32,5 +32,5 @@ if possible and st.button("Get Detailed Blog"):
     if transcript_text:
         blog=generate_gemini_blog(transcript_text,count)
         st.markdown("## Detailed Blog:")
-        st.write("Blog length"+f"{count}")
+        # st.write("Blog length"+f"{count}")
         st.write(blog)
