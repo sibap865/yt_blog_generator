@@ -5,12 +5,11 @@ import streamlit as st
 import google.generativeai as genai
 from youtube_transcript_api import YouTubeTranscriptApi
 api =st.secrets["GOOGLE_API_KEY"]
+# api =os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=api)
 
-def yt_transcript(youtube_video_url):
+def yt_transcript(video_id):
     try:
-        video_id_and_list=youtube_video_url.split("=")[1]
-        video_id =video_id_and_list.split("&")[0]
         transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
         for transcript in transcript_list:
             transcript_text =transcript.translate('en').fetch()
