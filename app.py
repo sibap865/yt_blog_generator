@@ -19,7 +19,7 @@ if youtube_link:
             video_id =video_id[1].split("&")[0]
         except:
             video_id =video_id[0].split("/")
-            video_id =video_id[3].split("?")[0]
+            video_id =video_id[-1].split("?")[0]
     except:
         st.write("This is not a youtube link")
 
