@@ -1,12 +1,12 @@
 import os
 import streamlit as st
 # from dotenv import load_dotenv
-# load_dotenv() ##load all the nevironment variables if you are using .env file
+# load_dotenv() ##load all the nevironment variables if you are using .env file and locally
 import google.generativeai as genai
 from youtube_transcript_api import YouTubeTranscriptApi
-api =st.secrets["GOOGLE_API_KEY"]
-# api =os.getenv("GOOGLE_API_KEY")
-genai.configure(api_key=api)
+api =st.secrets["GOOGLE_API_KEY"] #comment this when you want to deploy
+# api =os.getenv("GOOGLE_API_KEY") uncomment this during locally
+genai.configure(api_key=api)  
 
 def yt_transcript(video_id):
     try:
